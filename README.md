@@ -21,6 +21,9 @@ providing a new board implementation. It also allows for mocking of the Board.
 The `App` takes its input from `System.in`, so can be driven from a text file or pipe via 
 operating system redirection
 
+The PLACE command is parsed using a regular expression that will not accept minus signs 
+before the coordinates, so a PLACE command with negative values will be silently ignored.
+
 Where possible classes are immutable to simplify testing and reasoning about the code.
 
 ## Building the project
